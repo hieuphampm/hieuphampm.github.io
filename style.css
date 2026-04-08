@@ -268,3 +268,74 @@ footer p {
         font-size: 1.6rem;
     }
 }
+
+/* Work Experience */
+.experience-item {
+    border-left: 2px solid #ffffff;
+    padding-left: 1.5rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.exp-badge {
+    font-size: 0.75rem;
+    border: 1px solid #555555;
+    color: #aaaaaa;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.exp-divider {
+    width: 100%;
+    height: 1px;
+    background: #222222;
+    margin: 14px 0;
+}
+
+.exp-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp-bullets li {
+    font-size: 0.95rem;
+    color: #cccccc;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #555555;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    background: #111111;
+    border: 1px solid #333333;
+    color: #888888;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
