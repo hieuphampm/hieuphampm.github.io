@@ -31,41 +31,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navbar
-let lastScroll = 0;
+// Active Navigation Link on Scroll & Navbar style
+const sections = document.querySelectorAll('section');
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const scrollY = window.pageYOffset;
+    let current = '';
     
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(255, 255, 255, 0.1)';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (current && link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Navbar scroll effect
+    if (scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
-    
-    lastScroll = currentScroll;
 });
 
-// Optional: Add fade-in animation for sections
+// Apply fade-in animation for sections
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Apply fade-in to all sections
 document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
