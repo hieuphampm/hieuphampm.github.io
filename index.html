@@ -19,16 +19,25 @@
     <meta name="citation_pdf_url" content="https://hieuphampm.github.io/Articals/BuildinganAdaptiveVietnameseLicensePlateRecognition.pdf">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar glass-nav">
         <div class="container">
-            <div class="nav-brand">Phuoc Minh Hieu PHAM</div>
+            <div class="nav-brand glow-text">Phuoc Minh Hieu PHAM</div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -39,128 +48,144 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
+    <section class="hero reveal">
+        <div class="container hero-container">
             <div class="hero-content">
-                <img src="Images\ava.jpg" alt="Profile Photo" class="profile-img">
-                <h1>Phuoc Minh Hieu PHAM</h1>
-                <p class="subtitle">Bachelor Student | Information Technology</p>
+                <div class="profile-img-container">
+                    <img src="Images\ava.jpg" alt="Profile Photo" class="profile-img">
+                    <div class="img-glow"></div>
+                </div>
+                <h1 class="typing-container"><span class="typing-text">Phuoc Minh Hieu PHAM</span></h1>
+                <p class="subtitle gradient-text">Bachelor Student | Information Technology</p>
                 <p class="affiliation">University of Management and Technology HCMC</p>
                 <div class="social-links">
-                    <a href="mailto:hieuphamminh976@gmail.com" aria-label="Email">Email</a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=mTX8xQoAAAAJ&sortby=title&view_op=list_works&gmla=AKzYXQ2fmbAgCGHgizt4ntdH3kLG02cqaBUnq-ivP7CFdstEjoz4MOOl2VRKZ9ZB80zUF21pzdLq_ifsKhp_Ypwd" target="_blank" aria-label="Google Scholar">Scholar</a>
-                    <a href="https://github.com/hieuphampm" target="_blank" aria-label="GitHub">GitHub</a>
-                    <a href="https://www.linkedin.com/in/hieupham976/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="mailto:hieuphamminh976@gmail.com" aria-label="Email" class="glass-btn">Email</a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=mTX8xQoAAAAJ&sortby=title&view_op=list_works&gmla=AKzYXQ2fmbAgCGHgizt4ntdH3kLG02cqaBUnq-ivP7CFdstEjoz4MOOl2VRKZ9ZB80zUF21pzdLq_ifsKhp_Ypwd" target="_blank" aria-label="Google Scholar" class="glass-btn">Scholar</a>
+                    <a href="https://github.com/hieuphampm" target="_blank" aria-label="GitHub" class="glass-btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/hieupham976/" target="_blank" aria-label="LinkedIn" class="glass-btn">LinkedIn</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <div class="container">
-            <h2>About</h2>
-            <p>I'm a passionate Information Technology student majoring in Data Science with a good foundation in AI. Currently pursuing a Bachelor's degree at University of Management and Technology HCMC. I enjoy researching and testing AI models to better understand their behavior and improve their performance. I am passionate about extracting insights from complex datasets and building AI (Computer Vision and Deep Learning) systems. In my spare time, I will try to research existing models and learn more about new models.</p>
+            <h2 class="section-title">About<span class="dot">.</span></h2>
+            <div class="about-bento glass-card spotlight-card">
+                <p>I'm a passionate Information Technology student majoring in <strong>Data Science</strong> with a strong foundation in <strong>AI</strong>. Currently pursuing a Bachelor's degree at University of Management and Technology HCMC.</p>
+                <p>I am passionate about extracting insights from complex datasets and building AI (Computer Vision and Deep Learning) systems. In my spare time, I enjoy researching and testing new AI models to understand their behavior and improve their performance.</p>
+            </div>
         </div>
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="section">
+    <section id="experience" class="section reveal">
         <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-            <div class="exp-header">
-                <h3>Data Science Intern</h3>
-                <span class="exp-badge">Sep 2025 – Dec 2025</span>
-            </div>
-            <p class="company">Motorola Solutions R&D Center Vietnam</p>
-            <div class="exp-divider"></div>
-            <ul class="exp-bullets">
-                <li>Developed and optimized end-to-end Computer Vision pipelines, covering data engineering, model architecture design (CNNs, Transformers), and performance evaluation for real-world classification and image generation tasks.</li>
-                <li>Implemented Generative AI solutions (Diffusion Models, GANs) for advanced data augmentation and image synthesis, addressing data scarcity and class imbalance in production datasets.</li>
-            </ul>
-                <div class="tags">
-                    <span class="tag">Computer Vision</span>
-                    <span class="tag">CNNs</span>
-                    <span class="tag">Transformers</span>
-                    <span class="tag">Diffusion Models</span>
-                    <span class="tag">GANs</span>
-                    <span class="tag">Data Augmentation</span>
+            <h2 class="section-title">Work Experience<span class="dot">.</span></h2>
+            <div class="timeline">
+                <div class="timeline-item reveal slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card spotlight-card">
+                        <div class="exp-header">
+                            <h3>Data Science Intern</h3>
+                            <span class="exp-badge glow-badge">Sep 2025 – Dec 2025</span>
+                        </div>
+                        <p class="company gradient-text">Motorola Solutions R&D Center Vietnam</p>
+                        <ul class="exp-bullets">
+                            <li>Developed and optimized end-to-end Computer Vision pipelines, covering data engineering, model architecture design (CNNs, Transformers), and performance evaluation for real-world classification and image generation tasks.</li>
+                            <li>Implemented Generative AI solutions (Diffusion Models, GANs) for advanced data augmentation and image synthesis, addressing data scarcity and class imbalance in production datasets.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">CNNs</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">Diffusion Models</span>
+                            <span class="tag">GANs</span>
+                            <span class="tag">Data Augmentation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="section">
+    <section id="publications" class="section reveal">
         <div class="container">
-            <h2>Publications</h2>
+            <h2 class="section-title">Publications<span class="dot">.</span></h2>
             
-            <div class="publication">
-            <h2>Building an Adaptive Vietnamese License Plate Recognition and Retrieval System using Multi-Task Deep Learning</h2>
-
-            <p class="authors">
-                <strong>Pham Phuoc Minh Hieu</strong>, Cao Sy Sieu, Huynh Le Phu Trung
-            </p>
-
-            <p class="venue">DCEST 2026</p>
-
-            <p class="abstract">
-                Automatic License Plate Recognition (ALPR) is an essential component of intelligent transportation, yet its performance is often significantly degraded by real-world image distortions and regional plate format complexities. This research addresses these challenges by proposing a highly adaptive, multi-task deep learning framework specifically designed for the Vietnamese license plate context. The system targets the unique diversity of Vietnamese plates while robustly handling low-quality image inputs through a multi-stage, conditional pipeline. First, a real-time object detection model localizes all license plate instances. The core component is a lightweight Quality Assessment Module (QAM), which acts as an intelligent router, classifying each plate as “clear”, “restorable”, or “unrestorable”. Based on this assessment, “restorable” images are selectively forwarded to a Swin2SR-based restoration network, while “clear” images bypass this step to optimize throughput, and “unrestorable” inputs are discarded. Finally, a Transformer-based Optical Character Recognition (OCR) model transcribes the characters to retrieve vehicle information. Experimental evaluations confirm the effectiveness of this end-to-end adaptive strategy, achieving a Character Accuracy of 96.07% and a Sequence Accuracy of 89.69%. These results demonstrate significant robustness against real-world distortions compared to traditional monolithic pipelines, offering a practical and efficient solution for ALPR applications in Vietnam.
-            </p>
-            <div class="pub-links">
-                <p>
-                    <a href="https://zenodo.org/records/19471924?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImY5OWU1ZDUxLWFmZDQtNDM5Yi1iMjg1LWViNGQ3ZTQxNTNjZiIsImRhdGEiOnt9LCJyYW5kb20iOiJjOTI3MGEwMzE5NDVkY2YxZjhjNjY4NmVkZmViMGMwOSJ9.WWc4DUIVOAdV1zt5wEiWpIWJo0dbZmcYgi-Tb1v9ndd75rIyH5xZ0mjU5jzOkgvlKzSJrOCddoqv_XKgtIdXcA" target="_blank" >
-                        Read PDF
-                    </a>
+            <div class="publication glass-card spotlight-card reveal slide-up">
+                <h3>Building an Adaptive Vietnamese License Plate Recognition and Retrieval System using Multi-Task Deep Learning</h3>
+                
+                <p class="authors">
+                    <strong>Pham Phuoc Minh Hieu</strong>, Cao Sy Sieu, Huynh Le Phu Trung
                 </p>
+                
+                <span class="venue badge">DCEST 2026</span>
+                
+                <p class="abstract">
+                    Automatic License Plate Recognition (ALPR) is an essential component of intelligent transportation, yet its performance is often significantly degraded by real-world image distortions and regional plate format complexities. This research addresses these challenges by proposing a highly adaptive, multi-task deep learning framework specifically designed for the Vietnamese license plate context...
+                </p>
+                <div class="pub-links">
+                    <a href="https://zenodo.org/records/19471924?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImY5OWU1ZDUxLWFmZDQtNDM5Yi1iMjg1LWViNGQ3ZTQxNTNjZiIsImRhdGEiOnt9LCJyYW5kb20iOiJjOTI3MGEwMzE5NDVkY2YxZjhjNjY4NmVkZmViMGMwOSJ9.WWc4DUIVOAdV1zt5wEiWpIWJo0dbZmcYgi-Tb1v9ndd75rIyH5xZ0mjU5jzOkgvlKzSJrOCddoqv_XKgtIdXcA" target="_blank" class="glass-btn primary-btn">
+                        <span>Read PDF</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section reveal">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 class="section-title">Projects<span class="dot">.</span></h2>
 
-            <div class="project">
-                <h3>Outpainting for License Plate Data Augmentation</h3>
-                <p>This project employs Image Outpainting techniques, using deep learning models to predict and generate image segments that extend beyond the original canvas while maintaining consistency in content, lighting, and texture.</p>
-                <div class="pub-links">
-                    <a href="https://github.com/hieuphampm/Outpainting-for-License-Plate-Data-Augmentation" target="_blank">GitHub</a>
+            <div class="bento-grid">
+                <div class="project glass-card spotlight-card reveal slide-up" style="transition-delay: 0.1s">
+                    <h3>Outpainting for License Plate Data Augmentation</h3>
+                    <p>This project employs Image Outpainting techniques, using deep learning models to predict and generate image segments that extend beyond the original canvas while maintaining consistency in content, lighting, and texture.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/hieuphampm/Outpainting-for-License-Plate-Data-Augmentation" target="_blank" class="glass-btn">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Vehicle Orientation Classification System</h3>
-                <p>The Vehicle Orientation Classification System is a deep learning-based project designed to automatically recognize and classify the orientation of vehicles from images.</p>
-                <div class="pub-links">
-                    <a href="https://github.com/hieuphampm/Vehicle-Orientation-Classification-System" target="_blank">GitHub</a>
+                <div class="project glass-card spotlight-card reveal slide-up" style="transition-delay: 0.2s">
+                    <h3>Vehicle Orientation Classification System</h3>
+                    <p>The Vehicle Orientation Classification System is a deep learning-based project designed to automatically recognize and classify the orientation of vehicles from images.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/hieuphampm/Vehicle-Orientation-Classification-System" target="_blank" class="glass-btn">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Face Recognition</h3>
-                <p>A deep learning project that uses metric learning with Triplet Loss to recognize faces by learning discriminative embeddings. Similar faces are mapped closer together in the embedding space, enabling accurate identity matching and real-time face retrieval.</p>
-                <div class="pub-links">
-                    <a href="https://github.com/hieuphampm/Face_Recognition_using_Metric_Learning" target="_blank">GitHub</a>
+                <div class="project glass-card spotlight-card reveal slide-up" style="transition-delay: 0.3s">
+                    <h3>Face Recognition</h3>
+                    <p>A deep learning project that uses metric learning with Triplet Loss to recognize faces by learning discriminative embeddings. Similar faces are mapped closer together, enabling accurate matching.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/hieuphampm/Face_Recognition_using_Metric_Learning" target="_blank" class="glass-btn">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me via email at <a href="mailto:hieuphamminh976@gmail.com">hieuphamminh976@gmail.com</a></p>
-            University of Management and Technology HCMC<br>
-            Ho Chi Minh city, 70000</p>
+    <section id="contact" class="section reveal">
+        <div class="container contact-container glass-card spotlight-card">
+            <h2 class="section-title text-center">Let's Connect<span class="dot">.</span></h2>
+            <p class="text-center">Feel free to reach out to me via email</p>
+            <a href="mailto:hieuphamminh976@gmail.com" class="contact-email glow-text">hieuphamminh976@gmail.com</a>
+            
+            <div class="address-box">
+                <p>University of Management and Technology HCMC<br>
+                Ho Chi Minh city, 70000</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="glass-footer">
         <div class="container">
             <p>&copy; 2026 Phuoc Minh Hieu PHAM. Powered by GitHub Pages.</p>
         </div>
