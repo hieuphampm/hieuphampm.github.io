@@ -138,3 +138,61 @@ if (typingText) {
     // Start typing after initial load delay
     setTimeout(typeWriter, 500);
 }
+
+// Certificates Filter
+const filterBtns = document.querySelectorAll('.cert-filter');
+const certCards = document.querySelectorAll('.cert-card');
+
+if (filterBtns && certCards) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filterValue = btn.getAttribute('data-filter');
+            
+            certCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.classList.remove('hide');
+                    // Retrigger animation by removing and adding active
+                    card.classList.remove('active');
+                    setTimeout(() => {
+                        card.classList.add('active');
+                    }, 50);
+                } else {
+                    card.classList.add('hide');
+                    card.classList.remove('active');
+                }
+            });
+        });
+    });
+}
+
+// 3D Tilt Magic Animation for Cert Cards
+certCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s ease';
+        setTimeout(() => {
+            card.style.transition = '';
+        }, 500);
+    });
+    
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s ease';
+    });
+});
